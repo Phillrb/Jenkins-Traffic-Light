@@ -6,7 +6,7 @@ An OSX app that monitors a Jenkins RSS build feed and updates a soft traffic lig
 This OSX app is a lightweight tool that: 
 - monitors a single Jenkins RSS feed
 - updates a virtual traffic light in an NSWindow
-- optionally sends the build status to an attached Arduino via USB (see git repo: x for Arduino code)
+- optionally sends the build status to an attached Arduino via USB - code for Arduino will be uploaded soon.
 
 Features include:
 - displaying build status in the OSX status bar, dock and window
@@ -18,7 +18,7 @@ Detail:
 - The RSS feed is pulled down every 60 seconds and parsed (feel free to change this value)
 - Build status is extracted from RSS
 - On a change of status a notification is displayed vis Notification Center in OSX 10.8
-- If an Arduino is attached by USB the build status is sent to it (as an integer) utilising the excellent ORSSerialPort class provided by Andrew R. Madsen (see git repo x)
+- If an Arduino is attached by USB the build status is sent to it (as an integer) utilising the excellent ORSSerialPort class provided by Andrew R. Madsen (see githup repo: https://github.com/armadsen/ORSSerialPort)
 
 Potential Areas Of Improvement:
 - Currently uses simple string parsing to find the build status from the RSS (on the upside it's quick and doesn't need any additional frameworks)
