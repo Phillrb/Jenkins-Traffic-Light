@@ -11,7 +11,7 @@ The OSX app is a lightweight tool that:
 The Arduino sketch is a simple piece of code that:
 - listens to serial data sent over USB from the OSX app
 - sets 3 digital 5v pins accordingly (turning lights or LEDs on & off) 
-- sounds an audio alert on state change using an attached speaker
+- sounds an audio alert on state change using an attached speaker by utilising 'pitch.h' - originally written by Brett Hagman (see http://arduino.cc/en/Tutorial/tone)
 
 OSX app features include:
 - displaying build status in the OSX status bar, dock and window
