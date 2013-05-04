@@ -1,7 +1,7 @@
 Jenkins-Traffic-Light
 =====================
 
-An OSX app (and optional Arduino sketch) to monitor a Jenkins RSS build feed and update a soft traffic light and also an Arduino via USB
+An OSX app and accompanying Arduino sketch to monitor a Jenkins RSS build feed and update an on-screen traffic light as well as a real traffic light.
 
 The OSX app is a lightweight tool that: 
 - monitors a single Jenkins RSS feed
