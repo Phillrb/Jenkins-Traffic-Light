@@ -49,7 +49,7 @@ int lastState = initState;
 //Setup method is called once
 void setup() 
 {                
-  // initialize the digital pins as an output pins.
+  // initialize the digital pins as output pins.
   pinMode(redPin, OUTPUT);     
   pinMode(yellowPin, OUTPUT);
   pinMode(greenPin, OUTPUT);
