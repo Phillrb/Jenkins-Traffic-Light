@@ -416,7 +416,7 @@ NSString *lastBuildNumber;
     [self setLastBuildURL:buildURL];
 
     //Parse message for current status
-    [self updateStateBasedOnRSSStatusString:message];
+    [self updateStateBasedOnRSSStatusString:messageWithoutBuildNumber];
         
     //Update Light
     [self updateLightAfterStatusSet];
@@ -448,11 +448,18 @@ NSString *lastBuildNumber;
      Run.Summary.BrokenSince=broken since build {0}
      */
     
-    if([message hasPrefix:@"normal"] || [message hasPrefix:@"stable"])
+    if(
+       [message rangeOfString:@"normal" options:NSCaseInsensitiveSearch].location != NSNotFound
+       ||
+       (
+        [message rangeOfString:@"stable" options:NSCaseInsensitiveSearch].location != NSNotFound
+        && [message rangeOfString:@"unstable" options:NSCaseInsensitiveSearch].location == NSNotFound
+        )
+       )
     {
         status = greenState;
     }
-    else if([message hasPrefix:@"broken"])
+    else if([message rangeOfString:@"broken" options:NSCaseInsensitiveSearch].location != NSNotFound)
     {
         status = redState;
     }
